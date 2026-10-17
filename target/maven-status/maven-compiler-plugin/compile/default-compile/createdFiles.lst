@@ -1,0 +1,6 @@
+com\studentmanagement\StudentData.class
+com\studentmanagement\DatabaseConnection.class
+com\studentmanagement\Main.class
+com\studentmanagement\AttendanceController$1.class
+com\studentmanagement\Student.class
+com\studentmanagement\TestConnection.class

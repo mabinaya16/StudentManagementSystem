@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.studentmanagement.DashboardController"
+            stylesheets="@style.css">
+
+    <!-- ==========================
+         HEADER
+         ========================== -->
+
+    <top>
+
+        <Label text="Student Management Dashboard"
+               styleClass="dashboard-title"/>
+
+    </top>
+
+
+    <!-- ==========================
+         MAIN CONTENT
+         ========================== -->
+
+    <center>
+
+        <VBox spacing="30"
+              alignment="CENTER">
+
+
+            <!-- ==========================
+                 DASHBOARD CARDS
+                 ========================== -->
+
+            <HBox spacing="25"
+                  alignment="CENTER">
+
+
+                <!-- TOTAL STUDENTS -->
+
+                <VBox spacing="10"
+                      alignment="CENTER"
+                      styleClass="dashboard-card">
+
+                    <Label text="Total Students"
+                           styleClass="card-title"/>
+
+                    <Label fx:id="totalStudentsLabel"
+                           text="0"
+                           styleClass="card-number"/>
+
+                </VBox>
+
+
+                <!-- PRESENT -->
+
+                <VBox spacing="10"
+                      alignment="CENTER"
+                      styleClass="dashboard-card">
+
+                    <Label text="Present Today"
+                           styleClass="card-title"/>
+
+                    <Label fx:id="presentStudentsLabel"
+                           text="0"
+                           styleClass="card-number"/>
+
+                </VBox>
+
+
+                <!-- ABSENT -->
+
+                <VBox spacing="10"
+                      alignment="CENTER"
+                      styleClass="dashboard-card">
+
+                    <Label text="Absent Today"
+                           styleClass="card-title"/>
+
+                    <Label fx:id="absentStudentsLabel"
+                           text="0"
+                           styleClass="card-number"/>
+
+                </VBox>
+
+            </HBox>
+
+
+            <!-- ==========================
+                 MENU BUTTONS
+                 ========================== -->
+
+            <HBox spacing="20"
+                  alignment="CENTER">
+
+
+                <!-- ADD STUDENT -->
+
+                <Button text="Add Student"
+                        onAction="#addStudent"
+                        styleClass="dashboard-button"/>
+
+
+                <!-- VIEW STUDENTS -->
+
+                <Button text="View Students"
+                        onAction="#viewStudents"
+                        styleClass="dashboard-button"/>
+
+
+                <!-- ATTENDANCE -->
+
+                <Button text="Attendance"
+                        onAction="#attendance"
+                        styleClass="dashboard-button"/>
+
+
+                <!-- ATTENDANCE HISTORY -->
+
+                <Button text="Attendance History"
+                        onAction="#attendanceHistory"
+                        styleClass="dashboard-button"/>
+
+
+                <!-- EXIT -->
+
+                <Button text="Exit"
+                        onAction="#exitApplication"
+                        styleClass="dashboard-button"/>
+
+            </HBox>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

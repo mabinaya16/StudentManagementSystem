@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.studentmanagement.ViewStudentsController"
+      spacing="15"
+      alignment="CENTER"
+      stylesheets="@style.css">
+
+    <Label text="Student List"
+           styleClass="form-title"/>
+
+
+    <!-- SEARCH AREA -->
+
+    <HBox spacing="10"
+          alignment="CENTER">
+
+        <TextField fx:id="searchField"
+                   promptText="Search name, roll number, department..."
+                   prefWidth="400"/>
+
+        <Button text="Search"
+                onAction="#searchStudent"
+                styleClass="dashboard-button"/>
+
+        <Button text="Show All"
+                onAction="#showAllStudents"
+                styleClass="dashboard-button"/>
+
+    </HBox>
+
+
+    <!-- STUDENT TABLE -->
+
+    <TableView fx:id="studentTable"
+               prefWidth="850"
+               prefHeight="350">
+
+        <columns>
+
+            <TableColumn fx:id="nameColumn"
+                         text="Name"
+                         prefWidth="160"/>
+
+            <TableColumn fx:id="rollColumn"
+                         text="Roll Number"
+                         prefWidth="140"/>
+
+            <TableColumn fx:id="departmentColumn"
+                         text="Department"
+                         prefWidth="150"/>
+
+            <TableColumn fx:id="emailColumn"
+                         text="Email"
+                         prefWidth="220"/>
+
+            <TableColumn fx:id="actionColumn"
+                         text="Actions"
+                         prefWidth="160"/>
+
+        </columns>
+
+    </TableView>
+
+
+    <!-- CLOSE BUTTON -->
+
+    <Button text="Close"
+            onAction="#closeWindow"
+            styleClass="dashboard-button"/>
+
+</VBox>
